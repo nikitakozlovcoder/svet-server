@@ -40,7 +40,7 @@ $router->post('/mail', function () use ($router) {
 
 
 
- $post_data = "secret=6LcKrGgUAAAAAEwYjkIcDLsT7P1hVpJcyokI9HIk&response=".$_POST['g-recaptcha-response'];
+ $post_data = "secret&response=".$_POST['g-recaptcha-response'];
 
      $ch = curl_init();
 
@@ -86,7 +86,7 @@ if ($rep->success == true)
 
                     $mail->Username = 'ooo-skg@mail.ru';                 // SMTP username
 
-                    $mail->Password = 'tdutybq0412';                           // SMTP password
+                    $mail->Password = '';                           // SMTP password
 
                     $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 
